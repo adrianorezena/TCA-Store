@@ -16,6 +16,7 @@
 		80555FB029EACF9100711E8D /* TCA_StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FAF29EACF9100711E8D /* TCA_StoreTests.swift */; };
 		80555FBA29EACF9100711E8D /* TCA_StoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FB929EACF9100711E8D /* TCA_StoreUITests.swift */; };
 		80555FBC29EACF9100711E8D /* TCA_StoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FBB29EACF9100711E8D /* TCA_StoreUITestsLaunchTests.swift */; };
+		80555FCA29EC1FBA00711E8D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 80555FC929EC1FBA00711E8D /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80555FCA29EC1FBA00711E8D /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +151,9 @@
 			dependencies = (
 			);
 			name = "TCA Store";
+			packageProductDependencies = (
+				80555FC929EC1FBA00711E8D /* ComposableArchitecture */,
+			);
 			productName = "TCA Store";
 			productReference = 80555F9629EACF9000711E8D /* TCA Store.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 80555F8D29EACF9000711E8D;
+			packageReferences = (
+				80555FC829EC1FBA00711E8D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 80555F9729EACF9000711E8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -591,6 +599,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		80555FC829EC1FBA00711E8D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = exactVersion;
+				version = 0.52.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		80555FC929EC1FBA00711E8D /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80555FC829EC1FBA00711E8D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		80555FA429EACF9100711E8D /* TCA_Store.xcdatamodeld */ = {
