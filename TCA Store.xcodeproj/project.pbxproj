@@ -17,6 +17,11 @@
 		80555FBA29EACF9100711E8D /* TCA_StoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FB929EACF9100711E8D /* TCA_StoreUITests.swift */; };
 		80555FBC29EACF9100711E8D /* TCA_StoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FBB29EACF9100711E8D /* TCA_StoreUITestsLaunchTests.swift */; };
 		80555FCA29EC1FBA00711E8D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 80555FC929EC1FBA00711E8D /* ComposableArchitecture */; };
+		80555FCD29EC32E300711E8D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FCC29EC32E300711E8D /* HomeView.swift */; };
+		80555FCF29EC330E00711E8D /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FCE29EC330E00711E8D /* HomeState.swift */; };
+		80555FD129EC332F00711E8D /* HomeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FD029EC332F00711E8D /* HomeAction.swift */; };
+		80555FD329EC338200711E8D /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FD229EC338200711E8D /* HomeReducer.swift */; };
+		80555FD529EC33C400711E8D /* HomeEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FD429EC33C400711E8D /* HomeEnvironment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		80555FB529EACF9100711E8D /* TCA StoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TCA StoreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80555FB929EACF9100711E8D /* TCA_StoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_StoreUITests.swift; sourceTree = "<group>"; };
 		80555FBB29EACF9100711E8D /* TCA_StoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_StoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		80555FCC29EC32E300711E8D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		80555FCE29EC330E00711E8D /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
+		80555FD029EC332F00711E8D /* HomeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAction.swift; sourceTree = "<group>"; };
+		80555FD229EC338200711E8D /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
+		80555FD429EC33C400711E8D /* HomeEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEnvironment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,7 @@
 		80555F9829EACF9000711E8D /* TCA Store */ = {
 			isa = PBXGroup;
 			children = (
+				80555FCB29EC32C800711E8D /* Home */,
 				80555F9929EACF9000711E8D /* TCA_StoreApp.swift */,
 				80555F9B29EACF9000711E8D /* ContentView.swift */,
 				80555F9D29EACF9100711E8D /* Assets.xcassets */,
@@ -133,6 +144,18 @@
 				80555FBB29EACF9100711E8D /* TCA_StoreUITestsLaunchTests.swift */,
 			);
 			path = "TCA StoreUITests";
+			sourceTree = "<group>";
+		};
+		80555FCB29EC32C800711E8D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				80555FCC29EC32E300711E8D /* HomeView.swift */,
+				80555FCE29EC330E00711E8D /* HomeState.swift */,
+				80555FD029EC332F00711E8D /* HomeAction.swift */,
+				80555FD229EC338200711E8D /* HomeReducer.swift */,
+				80555FD429EC33C400711E8D /* HomeEnvironment.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +297,12 @@
 				80555FA329EACF9100711E8D /* Persistence.swift in Sources */,
 				80555F9C29EACF9000711E8D /* ContentView.swift in Sources */,
 				80555FA629EACF9100711E8D /* TCA_Store.xcdatamodeld in Sources */,
+				80555FD129EC332F00711E8D /* HomeAction.swift in Sources */,
+				80555FCD29EC32E300711E8D /* HomeView.swift in Sources */,
+				80555FD529EC33C400711E8D /* HomeEnvironment.swift in Sources */,
+				80555FCF29EC330E00711E8D /* HomeState.swift in Sources */,
 				80555F9A29EACF9000711E8D /* TCA_StoreApp.swift in Sources */,
+				80555FD329EC338200711E8D /* HomeReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
