@@ -12,7 +12,40 @@ struct HomeView: View {
     let store: Store<HomeState, HomeAction>
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        WithViewStore(store) { viewStore in
+            ScrollView(showsIndicators: false) {
+                LazyVStack {
+                    ForEach(viewStore.products) {
+                        productCell(
+                            title: $0.title,
+                            image: $0.image,
+                            price: $0.price
+                        )
+                    }
+                }
+            }
+            .task {
+                viewStore.send(.fetchProducts)
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func productCell(title: String, image: String, price: Double) -> some View {
+        VStack {
+            Text(title)
+            
+            AsyncImage(url: URL(string: image)) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 200)
+            } placeholder: {
+                ProgressView()
+            }
+            
+            Text("$\(price.description)")
+        }
     }
 }
 
@@ -22,7 +55,7 @@ struct HomeView_Previews: PreviewProvider {
             store: Store<HomeState, HomeAction>(
                 initialState: HomeState(),
                 reducer: homeReducer,
-                environment: HomeEnvironment()
+                environment: HomeEnvironment(productClient: .dev)
             )
          )
     }

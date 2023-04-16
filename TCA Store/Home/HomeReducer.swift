@@ -19,6 +19,7 @@ let homeReducer: HomeReducer = HomeReducer { state, action, env in
             .map(HomeAction.fetchProductsResponse)
         
     case let .fetchProductsResponse(.success(products)):
+        state.products = products
         return .none
         
     case let .fetchProductsResponse(.failure(failure)):
