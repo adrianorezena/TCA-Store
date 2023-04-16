@@ -14,7 +14,7 @@ struct HomeView: View {
     var body: some View {
         WithViewStore(store) { viewStore in
             ScrollView(showsIndicators: false) {
-                LazyVStack {
+                LazyVStack(spacing: 12) {
                     ForEach(viewStore.products) {
                         productCell(
                             title: $0.title,
@@ -23,6 +23,7 @@ struct HomeView: View {
                         )
                     }
                 }
+                .padding(.horizontal)
             }
             .task {
                 viewStore.send(.fetchProducts)
@@ -32,9 +33,7 @@ struct HomeView: View {
     
     @ViewBuilder
     func productCell(title: String, image: String, price: Double) -> some View {
-        VStack {
-            Text(title)
-            
+        VStack(spacing: 16) {
             AsyncImage(url: URL(string: image)) { image in
                 image
                     .resizable()
@@ -45,8 +44,23 @@ struct HomeView: View {
                     .frame(height: 200)
             }
             
-            Text("$\(price.description)")
+            Text(title)
+                .fontWeight(.bold)
+            
+            HStack {
+                Text("$\(price.description)")
+                
+                Spacer()
+            }
+            
         }
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background(
+            RoundedRectangle(cornerRadius: 8)
+                .fill(.gray.opacity(0.2))
+        )
+        
     }
 }
 
