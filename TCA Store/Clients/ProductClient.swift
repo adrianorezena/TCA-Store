@@ -10,7 +10,9 @@ import ComposableArchitecture
 import Foundation
 
 struct ProductClient {
-    enum Failure: Error, Equatable {}
+    enum Failure: Error, Equatable {
+        case error(String)
+    }
     
     var fetchProducts: () -> Effect<[Product], Failure>
 }
@@ -19,7 +21,21 @@ extension ProductClient {
     static let live: ProductClient = ProductClient(
         fetchProducts: {
             .future { callback in
-                
+                Task {
+                    let service: ProductService = ProductService()
+                    do {
+                        let response = try await service.fetchProducts()
+                     
+                        switch response {
+                        case let .success(products):
+                            callback(.success(products))
+                        case let .failure(error):
+                            callback(.failure(.error(error.localizedDescription)))
+                        }
+                    } catch {
+                        callback(.failure(.error(error.localizedDescription)))
+                    }
+                }
             }
         }
     )

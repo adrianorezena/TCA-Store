@@ -30,6 +30,9 @@
 		80555FF229EC799700711E8D /* TCANetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80555FDC29EC799700711E8D /* TCANetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		80555FFC29EC7A2F00711E8D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FFB29EC7A2F00711E8D /* Product.swift */; };
 		80555FFF29EC7C1200711E8D /* ProductClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FFE29EC7C1200711E8D /* ProductClient.swift */; };
+		8055600229EC884300711E8D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055600129EC884300711E8D /* HTTPClient.swift */; };
+		8055600429EC88C800711E8D /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055600329EC88C800711E8D /* URLSessionHTTPClient.swift */; };
+		8055600629EC890200711E8D /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055600529EC890200711E8D /* ProductService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +112,9 @@
 		80555FEC29EC799700711E8D /* TCANetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCANetworkTests.swift; sourceTree = "<group>"; };
 		80555FFB29EC7A2F00711E8D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		80555FFE29EC7C1200711E8D /* ProductClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductClient.swift; sourceTree = "<group>"; };
+		8055600129EC884300711E8D /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		8055600329EC88C800711E8D /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		8055600529EC890200711E8D /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,9 +238,12 @@
 		80555FDD29EC799700711E8D /* TCANetwork */ = {
 			isa = PBXGroup;
 			children = (
+				8055600029EC87EC00711E8D /* Service */,
 				80555FFA29EC7A1E00711E8D /* Model */,
 				80555FDE29EC799700711E8D /* TCANetwork.h */,
 				80555FDF29EC799700711E8D /* TCANetwork.docc */,
+				8055600129EC884300711E8D /* HTTPClient.swift */,
+				8055600329EC88C800711E8D /* URLSessionHTTPClient.swift */,
 			);
 			path = TCANetwork;
 			sourceTree = "<group>";
@@ -261,6 +270,14 @@
 				80555FFE29EC7C1200711E8D /* ProductClient.swift */,
 			);
 			path = Clients;
+			sourceTree = "<group>";
+		};
+		8055600029EC87EC00711E8D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8055600529EC890200711E8D /* ProductService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,6 +525,9 @@
 			files = (
 				80555FE029EC799700711E8D /* TCANetwork.docc in Sources */,
 				80555FFC29EC7A2F00711E8D /* Product.swift in Sources */,
+				8055600229EC884300711E8D /* HTTPClient.swift in Sources */,
+				8055600429EC88C800711E8D /* URLSessionHTTPClient.swift in Sources */,
+				8055600629EC890200711E8D /* ProductService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
