@@ -24,7 +24,6 @@
 		80555FD529EC33C400711E8D /* HomeEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FD429EC33C400711E8D /* HomeEnvironment.swift */; };
 		80555FE029EC799700711E8D /* TCANetwork.docc in Sources */ = {isa = PBXBuildFile; fileRef = 80555FDF29EC799700711E8D /* TCANetwork.docc */; };
 		80555FE629EC799700711E8D /* TCANetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80555FDC29EC799700711E8D /* TCANetwork.framework */; };
-		80555FED29EC799700711E8D /* TCANetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FEC29EC799700711E8D /* TCANetworkTests.swift */; };
 		80555FEE29EC799700711E8D /* TCANetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 80555FDE29EC799700711E8D /* TCANetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80555FF129EC799700711E8D /* TCANetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80555FDC29EC799700711E8D /* TCANetwork.framework */; };
 		80555FF229EC799700711E8D /* TCANetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80555FDC29EC799700711E8D /* TCANetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -33,6 +32,9 @@
 		8055600229EC884300711E8D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055600129EC884300711E8D /* HTTPClient.swift */; };
 		8055600429EC88C800711E8D /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055600329EC88C800711E8D /* URLSessionHTTPClient.swift */; };
 		8055600629EC890200711E8D /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055600529EC890200711E8D /* ProductService.swift */; };
+		8064834629ED6292008D9AFB /* ProductMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064834529ED6292008D9AFB /* ProductMapper.swift */; };
+		8064834929ED62C7008D9AFB /* ProductMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064834829ED62C7008D9AFB /* ProductMapperTests.swift */; };
+		8064834C29ED63D1008D9AFB /* XCTestCaseHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064834B29ED63D1008D9AFB /* XCTestCaseHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,12 +111,15 @@
 		80555FDE29EC799700711E8D /* TCANetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCANetwork.h; sourceTree = "<group>"; };
 		80555FDF29EC799700711E8D /* TCANetwork.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TCANetwork.docc; sourceTree = "<group>"; };
 		80555FE529EC799700711E8D /* TCANetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCANetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		80555FEC29EC799700711E8D /* TCANetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCANetworkTests.swift; sourceTree = "<group>"; };
 		80555FFB29EC7A2F00711E8D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		80555FFE29EC7C1200711E8D /* ProductClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductClient.swift; sourceTree = "<group>"; };
 		8055600129EC884300711E8D /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		8055600329EC88C800711E8D /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		8055600529EC890200711E8D /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		8064834529ED6292008D9AFB /* ProductMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMapper.swift; sourceTree = "<group>"; };
+		8064834829ED62C7008D9AFB /* ProductMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMapperTests.swift; sourceTree = "<group>"; };
+		8064834A29ED638D008D9AFB /* TCANetwork.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TCANetwork.xctestplan; sourceTree = "<group>"; };
+		8064834B29ED63D1008D9AFB /* XCTestCaseHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +167,7 @@
 		80555F8D29EACF9000711E8D = {
 			isa = PBXGroup;
 			children = (
+				8064834A29ED638D008D9AFB /* TCANetwork.xctestplan */,
 				80555F9829EACF9000711E8D /* TCA Store */,
 				80555FAE29EACF9100711E8D /* TCA StoreTests */,
 				80555FB829EACF9100711E8D /* TCA StoreUITests */,
@@ -251,7 +257,8 @@
 		80555FEB29EC799700711E8D /* TCANetworkTests */ = {
 			isa = PBXGroup;
 			children = (
-				80555FEC29EC799700711E8D /* TCANetworkTests.swift */,
+				8064834729ED62AD008D9AFB /* Service */,
+				8064834B29ED63D1008D9AFB /* XCTestCaseHelpers.swift */,
 			);
 			path = TCANetworkTests;
 			sourceTree = "<group>";
@@ -276,6 +283,15 @@
 			isa = PBXGroup;
 			children = (
 				8055600529EC890200711E8D /* ProductService.swift */,
+				8064834529ED6292008D9AFB /* ProductMapper.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8064834729ED62AD008D9AFB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8064834829ED62C7008D9AFB /* ProductMapperTests.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -525,6 +541,7 @@
 			files = (
 				80555FE029EC799700711E8D /* TCANetwork.docc in Sources */,
 				80555FFC29EC7A2F00711E8D /* Product.swift in Sources */,
+				8064834629ED6292008D9AFB /* ProductMapper.swift in Sources */,
 				8055600229EC884300711E8D /* HTTPClient.swift in Sources */,
 				8055600429EC88C800711E8D /* URLSessionHTTPClient.swift in Sources */,
 				8055600629EC890200711E8D /* ProductService.swift in Sources */,
@@ -535,7 +552,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80555FED29EC799700711E8D /* TCANetworkTests.swift in Sources */,
+				8064834929ED62C7008D9AFB /* ProductMapperTests.swift in Sources */,
+				8064834C29ED63D1008D9AFB /* XCTestCaseHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

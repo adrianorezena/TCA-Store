@@ -13,17 +13,21 @@ struct HomeView: View {
     
     var body: some View {
         WithViewStore(store) { viewStore in
-            ScrollView(showsIndicators: false) {
-                LazyVStack(spacing: 12) {
-                    ForEach(viewStore.products) {
-                        productCell(
-                            title: $0.title,
-                            image: $0.image,
-                            price: $0.price
-                        )
+            ZStack {
+                Color.gray.opacity(0.2).edgesIgnoringSafeArea(.all)
+                
+                ScrollView(showsIndicators: false) {
+                    LazyVStack(spacing: 12) {
+                        ForEach(viewStore.products) {
+                            productCell(
+                                title: $0.title,
+                                image: $0.image,
+                                price: $0.price
+                            )
+                        }
                     }
+                    .padding(.horizontal)
                 }
-                .padding(.horizontal)
             }
             .task {
                 viewStore.send(.fetchProducts)
@@ -58,7 +62,7 @@ struct HomeView: View {
         .frame(maxWidth: .infinity)
         .background(
             RoundedRectangle(cornerRadius: 8)
-                .fill(.gray.opacity(0.2))
+                .fill(.white)
         )
         
     }
