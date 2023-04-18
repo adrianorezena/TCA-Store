@@ -1,0 +1,55 @@
+{
+  "configurations" : [
+    {
+      "id" : "37E2A63B-55E7-489B-BCF3-84A8A47C5CB9",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:TCA Store.xcodeproj",
+          "identifier" : "80555F9529EACF9000711E8D",
+          "name" : "TCA Store"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:TCA Store.xcodeproj",
+      "identifier" : "80555F9529EACF9000711E8D",
+      "name" : "TCA Store"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:TCA Store.xcodeproj",
+        "identifier" : "80555FAA29EACF9100711E8D",
+        "name" : "TCA StoreTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:TCA Store.xcodeproj",
+        "identifier" : "80555FB429EACF9100711E8D",
+        "name" : "TCA StoreUITests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:TCA Store.xcodeproj",
+        "identifier" : "80555FE429EC799700711E8D",
+        "name" : "TCANetworkTests"
+      }
+    }
+  ],
+  "version" : 1
+}

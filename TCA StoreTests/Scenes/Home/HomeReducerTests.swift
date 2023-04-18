@@ -15,13 +15,7 @@ final class HomeReducerTests: XCTestCase {
     func test_fetchProducts_success() {
         let scheduler: TestSchedulerOf<DispatchQueue> = DispatchQueue.test
         
-        let testStore: TestStore<
-            HomeState,
-            HomeAction,
-            HomeState,
-            HomeAction,
-            HomeEnvironment
-        > = TestStore(
+        let testStore = TestStore(
             initialState: HomeState(),
             reducer: homeReducer,
             environment: HomeEnvironment(
@@ -40,13 +34,7 @@ final class HomeReducerTests: XCTestCase {
     func test_fetchProducts_failure() {
         let scheduler: TestSchedulerOf<DispatchQueue> = DispatchQueue.test
         
-        let testStore: TestStore<
-            HomeState,
-            HomeAction,
-            HomeState,
-            HomeAction,
-            HomeEnvironment
-        > = TestStore(
+        let testStore = TestStore(
             initialState: HomeState(),
             reducer: homeReducer,
             environment: HomeEnvironment(

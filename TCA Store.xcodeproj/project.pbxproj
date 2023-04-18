@@ -123,6 +123,7 @@
 		806DF01F29EEAB09002CB91F /* TCA StoreTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TCA StoreTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		806DF02029EEAB09002CB91F /* HomeReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducerTests.swift; sourceTree = "<group>"; };
 		806DF02229EEB2D0002CB91F /* TCAStoreTestsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAStoreTestsHelper.swift; sourceTree = "<group>"; };
+		806DF02429EEB525002CB91F /* TCA Store.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "TCA Store.xctestplan"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +171,7 @@
 		80555F8D29EACF9000711E8D = {
 			isa = PBXGroup;
 			children = (
+				806DF02429EEB525002CB91F /* TCA Store.xctestplan */,
 				8064834A29ED638D008D9AFB /* TCANetwork.xctestplan */,
 				80555F9829EACF9000711E8D /* TCA Store */,
 				80555FAE29EACF9100711E8D /* TCA StoreTests */,
