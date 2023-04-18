@@ -218,8 +218,8 @@
 		80555FAE29EACF9100711E8D /* TCA StoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				806DF01D29EEAA33002CB91F /* Scenes */,
 				806DF02229EEB2D0002CB91F /* TCAStoreTestsHelper.swift */,
+				806DF01D29EEAA33002CB91F /* Scenes */,
 			);
 			path = "TCA StoreTests";
 			sourceTree = "<group>";

@@ -6,6 +6,7 @@
 //
 
 @testable import TCA_Store
+import TCANetwork
 import ComposableArchitecture
 import XCTest
 
