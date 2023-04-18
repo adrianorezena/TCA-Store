@@ -13,7 +13,6 @@
 		80555FA129EACF9100711E8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80555FA029EACF9100711E8D /* Preview Assets.xcassets */; };
 		80555FA329EACF9100711E8D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FA229EACF9100711E8D /* Persistence.swift */; };
 		80555FA629EACF9100711E8D /* TCA_Store.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80555FA429EACF9100711E8D /* TCA_Store.xcdatamodeld */; };
-		80555FB029EACF9100711E8D /* TCA_StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FAF29EACF9100711E8D /* TCA_StoreTests.swift */; };
 		80555FBA29EACF9100711E8D /* TCA_StoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FB929EACF9100711E8D /* TCA_StoreUITests.swift */; };
 		80555FBC29EACF9100711E8D /* TCA_StoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80555FBB29EACF9100711E8D /* TCA_StoreUITestsLaunchTests.swift */; };
 		80555FCA29EC1FBA00711E8D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 80555FC929EC1FBA00711E8D /* ComposableArchitecture */; };
@@ -35,6 +34,8 @@
 		8064834629ED6292008D9AFB /* ProductMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064834529ED6292008D9AFB /* ProductMapper.swift */; };
 		8064834929ED62C7008D9AFB /* ProductMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064834829ED62C7008D9AFB /* ProductMapperTests.swift */; };
 		8064834C29ED63D1008D9AFB /* XCTestCaseHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064834B29ED63D1008D9AFB /* XCTestCaseHelpers.swift */; };
+		806DF02129EEAB09002CB91F /* HomeReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DF02029EEAB09002CB91F /* HomeReducerTests.swift */; };
+		806DF02329EEB2D0002CB91F /* TCAStoreTestsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DF02229EEB2D0002CB91F /* TCAStoreTestsHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +99,6 @@
 		80555FA229EACF9100711E8D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		80555FA529EACF9100711E8D /* TCA_Store.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TCA_Store.xcdatamodel; sourceTree = "<group>"; };
 		80555FAB29EACF9100711E8D /* TCA StoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TCA StoreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		80555FAF29EACF9100711E8D /* TCA_StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_StoreTests.swift; sourceTree = "<group>"; };
 		80555FB529EACF9100711E8D /* TCA StoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TCA StoreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80555FB929EACF9100711E8D /* TCA_StoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_StoreUITests.swift; sourceTree = "<group>"; };
 		80555FBB29EACF9100711E8D /* TCA_StoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_StoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -120,6 +120,9 @@
 		8064834829ED62C7008D9AFB /* ProductMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMapperTests.swift; sourceTree = "<group>"; };
 		8064834A29ED638D008D9AFB /* TCANetwork.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TCANetwork.xctestplan; sourceTree = "<group>"; };
 		8064834B29ED63D1008D9AFB /* XCTestCaseHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseHelpers.swift; sourceTree = "<group>"; };
+		806DF01F29EEAB09002CB91F /* TCA StoreTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TCA StoreTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		806DF02029EEAB09002CB91F /* HomeReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducerTests.swift; sourceTree = "<group>"; };
+		806DF02229EEB2D0002CB91F /* TCAStoreTestsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAStoreTestsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,8 +195,8 @@
 		80555F9829EACF9000711E8D /* TCA Store */ = {
 			isa = PBXGroup;
 			children = (
+				806DF01C29EEA9DC002CB91F /* Scenes */,
 				80555FFD29EC7BFB00711E8D /* Clients */,
-				80555FCB29EC32C800711E8D /* Home */,
 				80555F9929EACF9000711E8D /* TCA_StoreApp.swift */,
 				80555F9B29EACF9000711E8D /* ContentView.swift */,
 				80555F9D29EACF9100711E8D /* Assets.xcassets */,
@@ -215,7 +218,8 @@
 		80555FAE29EACF9100711E8D /* TCA StoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				80555FAF29EACF9100711E8D /* TCA_StoreTests.swift */,
+				806DF01D29EEAA33002CB91F /* Scenes */,
+				806DF02229EEB2D0002CB91F /* TCAStoreTestsHelper.swift */,
 			);
 			path = "TCA StoreTests";
 			sourceTree = "<group>";
@@ -294,6 +298,31 @@
 				8064834829ED62C7008D9AFB /* ProductMapperTests.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		806DF01C29EEA9DC002CB91F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				80555FCB29EC32C800711E8D /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		806DF01D29EEAA33002CB91F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				806DF01E29EEAA3B002CB91F /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		806DF01E29EEAA3B002CB91F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				806DF02029EEAB09002CB91F /* HomeReducerTests.swift */,
+				806DF01F29EEAB09002CB91F /* TCA StoreTests-Bridging-Header.h */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,6 +449,7 @@
 					};
 					80555FAA29EACF9100711E8D = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 						TestTargetID = 80555F9529EACF9000711E8D;
 					};
 					80555FB429EACF9100711E8D = {
@@ -522,7 +552,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80555FB029EACF9100711E8D /* TCA_StoreTests.swift in Sources */,
+				806DF02329EEB2D0002CB91F /* TCAStoreTestsHelper.swift in Sources */,
+				806DF02129EEAB09002CB91F /* HomeReducerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,6 +798,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YL3WUNX77R;
@@ -776,6 +808,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.rezena.test.TCA-StoreTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "TCA StoreTests/Scenes/Home/TCA StoreTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TCA Store.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TCA Store";
@@ -787,6 +821,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YL3WUNX77R;
@@ -796,6 +831,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.rezena.test.TCA-StoreTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "TCA StoreTests/Scenes/Home/TCA StoreTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TCA Store.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TCA Store";

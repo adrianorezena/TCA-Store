@@ -22,7 +22,8 @@ let homeReducer: HomeReducer = HomeReducer { state, action, env in
         state.products = products
         return .none
         
-    case let .fetchProductsResponse(.failure(failure)):
+    case let .fetchProductsResponse(.failure(.error(errorMessage))):
+        state.fetchProductsError = errorMessage
         return .none
         
     case .binding:

@@ -42,6 +42,7 @@ extension ProductClient {
 }
 
 extension ProductClient {
+
     static let dev: ProductClient = ProductClient(
         fetchProducts: {
             Effect(
@@ -63,6 +64,17 @@ extension ProductClient {
                         image: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
                     )
                 ]
+            )
+        }
+    )
+}
+
+extension ProductClient {
+
+    static let failing: ProductClient = ProductClient(
+        fetchProducts: {
+            Effect(
+                error: .error("Dummy error")
             )
         }
     )
