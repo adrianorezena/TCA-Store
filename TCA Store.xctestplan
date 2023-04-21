@@ -22,7 +22,8 @@
       "containerPath" : "container:TCA Store.xcodeproj",
       "identifier" : "80555F9529EACF9000711E8D",
       "name" : "TCA Store"
-    }
+    },
+    "testExecutionOrdering" : "random"
   },
   "testTargets" : [
     {
