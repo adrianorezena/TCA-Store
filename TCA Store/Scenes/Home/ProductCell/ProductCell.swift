@@ -30,6 +30,8 @@ struct ProductCell: View {
                 
                 HStack {
                     Text("$\(viewStore.product.price.description)")
+                        .font(.title2)
+                        .fontWeight(.bold)
                     
                     Spacer()
                     
