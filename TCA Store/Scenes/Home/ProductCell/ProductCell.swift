@@ -9,39 +9,6 @@ import TCANetwork
 import ComposableArchitecture
 import SwiftUI
 
-struct ProductCellState: Equatable, Identifiable {
-    let id: UUID
-    var product: Product
-    var addToCartState: AddToCartState = AddToCartState()
-}
-
-enum ProductCellAction: Equatable {
-    case addToCart(AddToCartAction)
-}
-
-struct ProductCellEnvironment {
-}
-
-typealias ProductCellReducer = Reducer<ProductCellState, ProductCellAction, ProductCellEnvironment>
-
-let productCellReducer: ProductCellReducer = ProductCellReducer.combine(
-    addToCartReducer.pullback(
-        state: \.addToCartState,
-        action: /ProductCellAction.addToCart,
-        environment: { _ in AddToCartEnvironment() }
-    ),
-    Reducer { state, action, env in
-        switch action {
-        case .addToCart(.didTapPlusButton):
-            return .none
-            
-        case .addToCart(.didTapMinusButton):
-            state.addToCartState.count = max(0, state.addToCartState.count)
-            return .none
-        }
-    }
-)
-
 struct ProductCell: View {
     let store: Store<ProductCellState, ProductCellAction>
     

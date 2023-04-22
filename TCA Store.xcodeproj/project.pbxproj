@@ -40,6 +40,10 @@
 		80D12ACB29F2C44A00CF2B64 /* AddToCartEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12ACA29F2C44A00CF2B64 /* AddToCartEnvironment.swift */; };
 		80D12ACD29F2C46000CF2B64 /* AddToCartReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12ACC29F2C46000CF2B64 /* AddToCartReducer.swift */; };
 		80D12AD029F402FD00CF2B64 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12ACF29F402FD00CF2B64 /* ProductCell.swift */; };
+		80D12AD229F4A38900CF2B64 /* ProductCellState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AD129F4A38900CF2B64 /* ProductCellState.swift */; };
+		80D12AD629F4A3BF00CF2B64 /* ProductCellAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AD529F4A3BF00CF2B64 /* ProductCellAction.swift */; };
+		80D12AD829F4A3DA00CF2B64 /* ProductCellEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AD729F4A3DA00CF2B64 /* ProductCellEnvironment.swift */; };
+		80D12ADA29F4A41F00CF2B64 /* ProductCellReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AD929F4A41F00CF2B64 /* ProductCellReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +128,10 @@
 		80D12ACA29F2C44A00CF2B64 /* AddToCartEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartEnvironment.swift; sourceTree = "<group>"; };
 		80D12ACC29F2C46000CF2B64 /* AddToCartReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartReducer.swift; sourceTree = "<group>"; };
 		80D12ACF29F402FD00CF2B64 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		80D12AD129F4A38900CF2B64 /* ProductCellState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellState.swift; sourceTree = "<group>"; };
+		80D12AD529F4A3BF00CF2B64 /* ProductCellAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellAction.swift; sourceTree = "<group>"; };
+		80D12AD729F4A3DA00CF2B64 /* ProductCellEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellEnvironment.swift; sourceTree = "<group>"; };
+		80D12AD929F4A41F00CF2B64 /* ProductCellReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +335,10 @@
 			isa = PBXGroup;
 			children = (
 				80D12ACF29F402FD00CF2B64 /* ProductCell.swift */,
+				80D12AD929F4A41F00CF2B64 /* ProductCellReducer.swift */,
+				80D12AD729F4A3DA00CF2B64 /* ProductCellEnvironment.swift */,
+				80D12AD529F4A3BF00CF2B64 /* ProductCellAction.swift */,
+				80D12AD129F4A38900CF2B64 /* ProductCellState.swift */,
 			);
 			path = ProductCell;
 			sourceTree = "<group>";
@@ -512,6 +524,7 @@
 			files = (
 				80555FFF29EC7C1200711E8D /* ProductClient.swift in Sources */,
 				80555FA329EACF9100711E8D /* Persistence.swift in Sources */,
+				80D12ADA29F4A41F00CF2B64 /* ProductCellReducer.swift in Sources */,
 				80555F9C29EACF9000711E8D /* ContentView.swift in Sources */,
 				80D12AC929F2C42F00CF2B64 /* AddToCartAction.swift in Sources */,
 				80D12ACD29F2C46000CF2B64 /* AddToCartReducer.swift in Sources */,
@@ -519,11 +532,14 @@
 				80555FD129EC332F00711E8D /* HomeAction.swift in Sources */,
 				80D12ACB29F2C44A00CF2B64 /* AddToCartEnvironment.swift in Sources */,
 				80555FCD29EC32E300711E8D /* HomeView.swift in Sources */,
+				80D12AD629F4A3BF00CF2B64 /* ProductCellAction.swift in Sources */,
 				80D12AC729F2C41500CF2B64 /* AddToCartState.swift in Sources */,
 				80D12AC529F2BDB100CF2B64 /* AddToCartButton.swift in Sources */,
+				80D12AD229F4A38900CF2B64 /* ProductCellState.swift in Sources */,
 				80555FD529EC33C400711E8D /* HomeEnvironment.swift in Sources */,
 				80555FCF29EC330E00711E8D /* HomeState.swift in Sources */,
 				80D12AD029F402FD00CF2B64 /* ProductCell.swift in Sources */,
+				80D12AD829F4A3DA00CF2B64 /* ProductCellEnvironment.swift in Sources */,
 				80555F9A29EACF9000711E8D /* TCA_StoreApp.swift in Sources */,
 				80555FD329EC338200711E8D /* HomeReducer.swift in Sources */,
 			);
