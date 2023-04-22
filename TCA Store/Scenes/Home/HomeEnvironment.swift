@@ -11,4 +11,5 @@ import Foundation
 struct HomeEnvironment {
     var mainQueue: AnySchedulerOf<DispatchQueue> = .main
     var productClient: ProductClient = .live
+    var uuid: @Sendable () -> UUID
 }

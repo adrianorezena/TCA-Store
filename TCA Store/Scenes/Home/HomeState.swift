@@ -10,6 +10,6 @@ import ComposableArchitecture
 import Foundation
 
 struct HomeState: Equatable {
-    var products: [Product] = []
     var fetchProductsError: String = ""
+    var productCellState: IdentifiedArrayOf<ProductCellState> = []
 }

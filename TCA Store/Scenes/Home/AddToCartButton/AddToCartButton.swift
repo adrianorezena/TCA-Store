@@ -47,20 +47,24 @@ struct AddToCartButton: View {
     @ViewBuilder
     func plusMinusButton() -> some View {
         WithViewStore(store) { viewStore in
-            HStack {
+            HStack(spacing: 16) {
                 Button(
                     action: {
-                        viewStore.send(.didTapPlusButton)
+                        viewStore.send(.didTapMinusButton)
                     },
                     label: {
-                        Text("+")
-                            .padding(.horizontal, 12)
+                        RoundedRectangle(cornerRadius: 4)
+                            .fill(.blue)
+                            .frame(width: 35)
+                            .overlay {
+                                if viewStore.count == 1 {
+                                    Image(systemName: "trash")
+                                } else {
+                                    Text("-")
+                                        
+                                }
+                            }
                             .foregroundColor(.white)
-                            .background(
-                                RoundedRectangle(cornerRadius: 4)
-                                    .fill(.blue)
-                                    .frame(height: 40)
-                            )
                     }
                 )
                 
@@ -69,17 +73,16 @@ struct AddToCartButton: View {
                 
                 Button(
                     action: {
-                        viewStore.send(.didTapMinusButton)
+                        viewStore.send(.didTapPlusButton)
                     },
                     label: {
-                        Text("-")
-                            .padding(.horizontal, 12)
+                        RoundedRectangle(cornerRadius: 4)
+                            .fill(.blue)
+                            .frame(width: 35)
+                            .overlay {
+                                Text("+")
+                            }
                             .foregroundColor(.white)
-                            .background(
-                                RoundedRectangle(cornerRadius: 4)
-                                    .fill(.blue)
-                                    .frame(height: 40)
-                            )
                     }
                 )
             }
@@ -102,6 +105,14 @@ struct AddToCartButton_Previews: PreviewProvider {
             AddToCartButton(
                 store: Store(
                     initialState: AddToCartState(count: 1),
+                    reducer: addToCartReducer,
+                    environment: AddToCartEnvironment()
+                )
+            )
+            
+            AddToCartButton(
+                store: Store(
+                    initialState: AddToCartState(count: 2),
                     reducer: addToCartReducer,
                     environment: AddToCartEnvironment()
                 )

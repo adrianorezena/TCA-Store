@@ -14,7 +14,7 @@ struct TCA_StoreApp: App {
         Store<HomeState, HomeAction>(
             initialState: HomeState(),
             reducer: homeReducer,
-            environment: HomeEnvironment()
+            environment: HomeEnvironment(uuid: { UUID() })
         )
     }()
 
