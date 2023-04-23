@@ -39,8 +39,8 @@ public struct ProductService {
                 let response: Result<[Product], Error> = mapResponse(result: result)
                 
                 switch response {
-                case let .success(newsArray):
-                    continuation.resume(returning: .success(newsArray))
+                case let .success(productsArray):
+                    continuation.resume(returning: .success(productsArray))
                 
                 case let .failure(error):
                     continuation.resume(throwing: error)
@@ -53,8 +53,8 @@ public struct ProductService {
         switch result {
         case let .success((data, _)):
             do {
-                let news = try ProductMapper.map(data)
-                return .success(news)
+                let products = try ProductMapper.map(data)
+                return .success(products)
             } catch {
                 return .failure(error)
             }

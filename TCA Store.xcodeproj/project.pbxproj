@@ -31,7 +31,7 @@
 		8055600629EC890200711E8D /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055600529EC890200711E8D /* ProductService.swift */; };
 		8064834629ED6292008D9AFB /* ProductMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064834529ED6292008D9AFB /* ProductMapper.swift */; };
 		8064834929ED62C7008D9AFB /* ProductMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064834829ED62C7008D9AFB /* ProductMapperTests.swift */; };
-		8064834C29ED63D1008D9AFB /* XCTestCaseHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064834B29ED63D1008D9AFB /* XCTestCaseHelpers.swift */; };
+		8064834C29ED63D1008D9AFB /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064834B29ED63D1008D9AFB /* SharedTestHelpers.swift */; };
 		806DF02129EEAB09002CB91F /* HomeReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DF02029EEAB09002CB91F /* HomeReducerTests.swift */; };
 		806DF02329EEB2D0002CB91F /* TCAStoreTestsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806DF02229EEB2D0002CB91F /* TCAStoreTestsHelper.swift */; };
 		80D12AC529F2BDB100CF2B64 /* AddToCartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AC429F2BDB100CF2B64 /* AddToCartButton.swift */; };
@@ -44,6 +44,8 @@
 		80D12AD629F4A3BF00CF2B64 /* ProductCellAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AD529F4A3BF00CF2B64 /* ProductCellAction.swift */; };
 		80D12AD829F4A3DA00CF2B64 /* ProductCellEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AD729F4A3DA00CF2B64 /* ProductCellEnvironment.swift */; };
 		80D12ADA29F4A41F00CF2B64 /* ProductCellReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AD929F4A41F00CF2B64 /* ProductCellReducer.swift */; };
+		80D12ADC29F4A5DB00CF2B64 /* ProductServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12ADB29F4A5DB00CF2B64 /* ProductServiceTests.swift */; };
+		80D12ADE29F4AA6100CF2B64 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12ADD29F4AA6100CF2B64 /* XCTestCase+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +119,7 @@
 		8064834529ED6292008D9AFB /* ProductMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMapper.swift; sourceTree = "<group>"; };
 		8064834829ED62C7008D9AFB /* ProductMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMapperTests.swift; sourceTree = "<group>"; };
 		8064834A29ED638D008D9AFB /* TCANetwork.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TCANetwork.xctestplan; sourceTree = "<group>"; };
-		8064834B29ED63D1008D9AFB /* XCTestCaseHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseHelpers.swift; sourceTree = "<group>"; };
+		8064834B29ED63D1008D9AFB /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		806DF01F29EEAB09002CB91F /* TCA StoreTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TCA StoreTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		806DF02029EEAB09002CB91F /* HomeReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducerTests.swift; sourceTree = "<group>"; };
 		806DF02229EEB2D0002CB91F /* TCAStoreTestsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAStoreTestsHelper.swift; sourceTree = "<group>"; };
@@ -132,6 +134,8 @@
 		80D12AD529F4A3BF00CF2B64 /* ProductCellAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellAction.swift; sourceTree = "<group>"; };
 		80D12AD729F4A3DA00CF2B64 /* ProductCellEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellEnvironment.swift; sourceTree = "<group>"; };
 		80D12AD929F4A41F00CF2B64 /* ProductCellReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellReducer.swift; sourceTree = "<group>"; };
+		80D12ADB29F4A5DB00CF2B64 /* ProductServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceTests.swift; sourceTree = "<group>"; };
+		80D12ADD29F4AA6100CF2B64 /* XCTestCase+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,7 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				8064834729ED62AD008D9AFB /* Service */,
-				8064834B29ED63D1008D9AFB /* XCTestCaseHelpers.swift */,
+				8064834B29ED63D1008D9AFB /* SharedTestHelpers.swift */,
+				80D12ADD29F4AA6100CF2B64 /* XCTestCase+Extensions.swift */,
 			);
 			path = TCANetworkTests;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				8064834829ED62C7008D9AFB /* ProductMapperTests.swift */,
+				80D12ADB29F4A5DB00CF2B64 /* ProductServiceTests.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -571,8 +577,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80D12ADE29F4AA6100CF2B64 /* XCTestCase+Extensions.swift in Sources */,
+				80D12ADC29F4A5DB00CF2B64 /* ProductServiceTests.swift in Sources */,
 				8064834929ED62C7008D9AFB /* ProductMapperTests.swift in Sources */,
-				8064834C29ED63D1008D9AFB /* XCTestCaseHelpers.swift in Sources */,
+				8064834C29ED63D1008D9AFB /* SharedTestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
