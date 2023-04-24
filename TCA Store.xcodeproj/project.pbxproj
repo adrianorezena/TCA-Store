@@ -47,6 +47,7 @@
 		80D12ADA29F4A41F00CF2B64 /* ProductCellReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AD929F4A41F00CF2B64 /* ProductCellReducer.swift */; };
 		80D12ADC29F4A5DB00CF2B64 /* ProductServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12ADB29F4A5DB00CF2B64 /* ProductServiceTests.swift */; };
 		80D12ADE29F4AA6100CF2B64 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12ADD29F4AA6100CF2B64 /* XCTestCase+Extensions.swift */; };
+		80E8DF3129F6A36700766821 /* AddToCartReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E8DF3029F6A36700766821 /* AddToCartReducerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,7 @@
 		80D12AD929F4A41F00CF2B64 /* ProductCellReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellReducer.swift; sourceTree = "<group>"; };
 		80D12ADB29F4A5DB00CF2B64 /* ProductServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceTests.swift; sourceTree = "<group>"; };
 		80D12ADD29F4AA6100CF2B64 /* XCTestCase+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extensions.swift"; sourceTree = "<group>"; };
+		80E8DF3029F6A36700766821 /* AddToCartReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartReducerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +331,7 @@
 		806DF01E29EEAA3B002CB91F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				80E8DF2F29F6A35400766821 /* AddToCartButton */,
 				80595ED329F69FDD0083E064 /* ProductCell */,
 				806DF02029EEAB09002CB91F /* HomeReducerTests.swift */,
 				806DF01F29EEAB09002CB91F /* TCA StoreTests-Bridging-Header.h */,
@@ -358,6 +361,14 @@
 				80D12AD129F4A38900CF2B64 /* ProductCellState.swift */,
 			);
 			path = ProductCell;
+			sourceTree = "<group>";
+		};
+		80E8DF2F29F6A35400766821 /* AddToCartButton */ = {
+			isa = PBXGroup;
+			children = (
+				80E8DF3029F6A36700766821 /* AddToCartReducerTests.swift */,
+			);
+			path = AddToCartButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -567,6 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				806DF02329EEB2D0002CB91F /* TCAStoreTestsHelper.swift in Sources */,
+				80E8DF3129F6A36700766821 /* AddToCartReducerTests.swift in Sources */,
 				806DF02129EEAB09002CB91F /* HomeReducerTests.swift in Sources */,
 				80595ED529F6A0040083E064 /* ProductCellReducerTests.swift in Sources */,
 			);
