@@ -12,6 +12,10 @@ import XCTest
 
 final class HomeReducerTests: XCTestCase {
 
+    override func setUp() {
+        UUID.testCounter = 0
+    }
+    
     func test_fetchProducts_success() {
         let scheduler: TestSchedulerOf<DispatchQueue> = DispatchQueue.test
         
@@ -20,14 +24,24 @@ final class HomeReducerTests: XCTestCase {
             reducer: homeReducer,
             environment: HomeEnvironment(
                 mainQueue: scheduler.eraseToAnyScheduler(),
-                productClient: .dev
+                productClient: .dev,
+                uuid: { UUID.testUUID }
             )
         )
-        
+
         testStore.send(.fetchProducts)
         scheduler.advance()
-         testStore.receive(.fetchProductsResponse(.success([Product.mock1, Product.mock2]))) {
-            $0.products = [Product.mock1, Product.mock2]
+        testStore.receive(.fetchProductsResponse(.success([Product.mock1, Product.mock2]))) {
+            $0.productCellState = [
+                ProductCellState(
+                    id: UUID(uuidString: "00000000-0000-0000-0000-000000000000")!,
+                    product: Product.mock1
+                ),
+                ProductCellState(
+                    id: UUID(uuidString: "00000000-0000-0000-0000-000000000001")!,
+                    product: Product.mock2
+                )
+            ]
         }
     }
     
@@ -39,7 +53,8 @@ final class HomeReducerTests: XCTestCase {
             reducer: homeReducer,
             environment: HomeEnvironment(
                 mainQueue: scheduler.eraseToAnyScheduler(),
-                productClient: .failing
+                productClient: .failing,
+                uuid: { UUID() }
             )
         )
         
