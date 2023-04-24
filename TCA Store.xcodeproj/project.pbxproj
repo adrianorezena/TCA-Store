@@ -29,6 +29,7 @@
 		8055600229EC884300711E8D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055600129EC884300711E8D /* HTTPClient.swift */; };
 		8055600429EC88C800711E8D /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055600329EC88C800711E8D /* URLSessionHTTPClient.swift */; };
 		8055600629EC890200711E8D /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055600529EC890200711E8D /* ProductService.swift */; };
+		80595ED529F6A0040083E064 /* ProductCellReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80595ED429F6A0040083E064 /* ProductCellReducerTests.swift */; };
 		8064834629ED6292008D9AFB /* ProductMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064834529ED6292008D9AFB /* ProductMapper.swift */; };
 		8064834929ED62C7008D9AFB /* ProductMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064834829ED62C7008D9AFB /* ProductMapperTests.swift */; };
 		8064834C29ED63D1008D9AFB /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064834B29ED63D1008D9AFB /* SharedTestHelpers.swift */; };
@@ -116,6 +117,7 @@
 		8055600129EC884300711E8D /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		8055600329EC88C800711E8D /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		8055600529EC890200711E8D /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		80595ED429F6A0040083E064 /* ProductCellReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellReducerTests.swift; sourceTree = "<group>"; };
 		8064834529ED6292008D9AFB /* ProductMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMapper.swift; sourceTree = "<group>"; };
 		8064834829ED62C7008D9AFB /* ProductMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductMapperTests.swift; sourceTree = "<group>"; };
 		8064834A29ED638D008D9AFB /* TCANetwork.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TCANetwork.xctestplan; sourceTree = "<group>"; };
@@ -291,6 +293,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		80595ED329F69FDD0083E064 /* ProductCell */ = {
+			isa = PBXGroup;
+			children = (
+				80595ED429F6A0040083E064 /* ProductCellReducerTests.swift */,
+			);
+			path = ProductCell;
+			sourceTree = "<group>";
+		};
 		8064834729ED62AD008D9AFB /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +329,7 @@
 		806DF01E29EEAA3B002CB91F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				80595ED329F69FDD0083E064 /* ProductCell */,
 				806DF02029EEAB09002CB91F /* HomeReducerTests.swift */,
 				806DF01F29EEAB09002CB91F /* TCA StoreTests-Bridging-Header.h */,
 			);
@@ -557,6 +568,7 @@
 			files = (
 				806DF02329EEB2D0002CB91F /* TCAStoreTestsHelper.swift in Sources */,
 				806DF02129EEAB09002CB91F /* HomeReducerTests.swift in Sources */,
+				80595ED529F6A0040083E064 /* ProductCellReducerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
