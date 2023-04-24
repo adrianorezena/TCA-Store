@@ -13,7 +13,7 @@ typealias HomeReducer = Reducer<HomeState, HomeAction, HomeEnvironment>
 let homeReducer: HomeReducer = HomeReducer.combine(
     productCellReducer.forEach(
         state: \.productCellState,
-        action: /HomeAction.product(id:action:),
+        action: /HomeAction.productCellDispatch,
         environment: { _ in ProductCellEnvironment() }
     ),
     Reducer { state, action, env in
@@ -43,7 +43,7 @@ let homeReducer: HomeReducer = HomeReducer.combine(
             return .none
             
         // case let .product(id, action):
-        case .product:
+        case .productCellDispatch:
             return .none
         }
     }

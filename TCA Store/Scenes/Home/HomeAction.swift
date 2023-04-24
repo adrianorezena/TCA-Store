@@ -15,5 +15,5 @@ enum HomeAction: BindableAction, Equatable {
     case binding(BindingAction<HomeState>)
     case fetchProducts
     case fetchProductsResponse(Result<[Product], ProductClient.Failure>)
-    case product(id: ProductCellState.ID, action: ProductCellAction)
+    case productCellDispatch(id: ProductCellState.ID, action: ProductCellAction)
 }

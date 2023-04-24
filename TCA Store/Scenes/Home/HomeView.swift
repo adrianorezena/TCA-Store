@@ -21,7 +21,7 @@ struct HomeView: View {
                         ForEachStore(
                             store.scope(
                                 state: \.productCellState,
-                                action: HomeAction.product)
+                                action: HomeAction.productCellDispatch)
                         ) {
                             ProductCell(store: $0)
                         }
