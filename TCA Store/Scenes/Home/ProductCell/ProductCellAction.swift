@@ -8,5 +8,5 @@
 import Foundation
 
 enum ProductCellAction: Equatable {
-    case addToCart(AddToCartAction)
+    case addToCartButtonDispatch(AddToCartAction)
 }

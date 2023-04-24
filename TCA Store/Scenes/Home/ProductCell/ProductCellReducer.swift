@@ -13,15 +13,15 @@ typealias ProductCellReducer = Reducer<ProductCellState, ProductCellAction, Prod
 let productCellReducer: ProductCellReducer = ProductCellReducer.combine(
     addToCartReducer.pullback(
         state: \.addToCartState,
-        action: /ProductCellAction.addToCart,
+        action: /ProductCellAction.addToCartButtonDispatch,
         environment: { _ in AddToCartEnvironment() }
     ),
     Reducer { state, action, env in
         switch action {
-        case .addToCart(.didTapPlusButton):
+        case .addToCartButtonDispatch(.didTapPlusButton):
             return .none
             
-        case .addToCart(.didTapMinusButton):
+        case .addToCartButtonDispatch(.didTapMinusButton):
             state.addToCartState.count = max(0, state.addToCartState.count)
             return .none
         }

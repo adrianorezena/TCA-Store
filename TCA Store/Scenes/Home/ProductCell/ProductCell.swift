@@ -38,7 +38,7 @@ struct ProductCell: View {
                     AddToCartButton(
                         store: store.scope(
                             state: \.addToCartState,
-                            action: ProductCellAction.addToCart
+                            action: ProductCellAction.addToCartButtonDispatch
                         )
                     )
                 }

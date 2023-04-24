@@ -19,15 +19,15 @@ final class ProductCellReducerTests: XCTestCase {
             environment: ProductCellEnvironment()
         )
         
-        testStore.send(.addToCart(.didTapPlusButton)) {
+        testStore.send(.addToCartButtonDispatch(.didTapPlusButton)) {
             $0.addToCartState.count = 1
         }
         
-        testStore.send(.addToCart(.didTapPlusButton)) {
+        testStore.send(.addToCartButtonDispatch(.didTapPlusButton)) {
             $0.addToCartState.count = 2
         }
         
-        testStore.send(.addToCart(.didTapPlusButton)) {
+        testStore.send(.addToCartButtonDispatch(.didTapPlusButton)) {
             $0.addToCartState.count = 3
         }
     }
@@ -39,8 +39,8 @@ final class ProductCellReducerTests: XCTestCase {
             environment: ProductCellEnvironment()
         )
         
-        testStore.send(.addToCart(.didTapMinusButton))
-        testStore.send(.addToCart(.didTapMinusButton))
-        testStore.send(.addToCart(.didTapMinusButton))
+        testStore.send(.addToCartButtonDispatch(.didTapMinusButton))
+        testStore.send(.addToCartButtonDispatch(.didTapMinusButton))
+        testStore.send(.addToCartButtonDispatch(.didTapMinusButton))
     }
 }
