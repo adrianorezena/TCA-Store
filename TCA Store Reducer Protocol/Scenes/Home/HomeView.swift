@@ -19,17 +19,15 @@ struct HomeView: View {
                 
                 ScrollView(showsIndicators: false) {
                     LazyVStack(spacing: 12) {
-                        ForEach(viewStore.products) {
-                            Text("\($0.title)")
-                                .foregroundColor(.blue)
-                        }
-//                        ForEachStore(
-//                            store.scope(
-//                                state: \.productCellState,
-//                                action: HomeAction.productCellDispatch)
-//                        ) {
-//                            ProductCell(store: $0)
-//                        }
+                        ForEachStore(
+                            self.store.scope(
+                                state: \.productCellStates,
+                                action: HomeReducer.Action.productCellDispatch
+                            ),
+                            content: {
+                                ProductCell(store: $0)
+                            }
+                        )
                     }
                     .padding(.horizontal)
                 }

@@ -10,7 +10,8 @@ import ComposableArchitecture
 import Foundation
 
 struct ProductCellReducer: ReducerProtocol {
-    struct State: Equatable {
+    struct State: Equatable, Identifiable {
+        let id: UUID
         var product: Product
     }
     

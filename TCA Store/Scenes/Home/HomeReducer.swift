@@ -41,8 +41,7 @@ let homeReducer: HomeReducer = HomeReducer.combine(
             
         case .binding:
             return .none
-            
-        // case let .product(id, action):
+        
         case .productCellDispatch:
             return .none
         }

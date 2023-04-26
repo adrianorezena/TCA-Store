@@ -11,7 +11,7 @@ import Foundation
 
 struct HomeReducer: ReducerProtocol {
     struct State: Equatable {
-        var products: [Product] = []
+        var productCellStates: IdentifiedArrayOf<ProductCellReducer.State> = []
         var fetchProductsError: String = ""
     }
     
@@ -19,9 +19,11 @@ struct HomeReducer: ReducerProtocol {
         case binding(BindingAction<State>)
         case fetchProducts
         case fetchProductsResponse(TaskResult<[Product]>)
+        case productCellDispatch(id: ProductCellReducer.State.ID, action: ProductCellReducer.Action)
     }
     
     @Dependency(\.productClient) var productClient
+    @Dependency(\.uuid) var uuid
     
     func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
         switch action {
@@ -35,11 +37,22 @@ struct HomeReducer: ReducerProtocol {
             }
             
         case let .fetchProductsResponse(.success(products)):
-            state.products = products
+            state.productCellStates = IdentifiedArrayOf(
+                uniqueElements: products.map {
+                    ProductCellReducer.State(
+                        id: uuid(),
+                        product: $0
+                    )
+                }
+            )
+            
             return .none
             
         case let .fetchProductsResponse(.failure(failure)):
             state.fetchProductsError = failure.localizedDescription
+            return .none
+            
+        case .productCellDispatch:
             return .none
             
         case .binding:

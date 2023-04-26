@@ -53,6 +53,7 @@ struct ProductCell_Previews: PreviewProvider {
         ProductCell(
             store: Store(
                 initialState: ProductCellReducer.State(
+                    id: UUID(),
                     product: Product(
                         id: 1,
                         title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
