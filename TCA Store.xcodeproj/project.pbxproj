@@ -42,6 +42,11 @@
 		807A29D129F92D41003E3306 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A29D029F92D41003E3306 /* Persistence.swift */; };
 		807A29D429F92D41003E3306 /* TCA_Store_Reducer_Protocol.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 807A29D229F92D41003E3306 /* TCA_Store_Reducer_Protocol.xcdatamodeld */; };
 		807A29DE29F92D41003E3306 /* TCA_Store_Reducer_ProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A29DD29F92D41003E3306 /* TCA_Store_Reducer_ProtocolTests.swift */; };
+		807A29F729F92DC9003E3306 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A29F629F92DC9003E3306 /* HomeView.swift */; };
+		807A29F929F92F8C003E3306 /* HomeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A29F829F92F8C003E3306 /* HomeReducer.swift */; };
+		807A29FC29F93167003E3306 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 807A29FB29F93167003E3306 /* ComposableArchitecture */; };
+		807A29FD29F93177003E3306 /* TCANetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80555FDC29EC799700711E8D /* TCANetwork.framework */; };
+		807A29FE29F93177003E3306 /* TCANetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80555FDC29EC799700711E8D /* TCANetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		80D12AC529F2BDB100CF2B64 /* AddToCartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AC429F2BDB100CF2B64 /* AddToCartButton.swift */; };
 		80D12AC729F2C41500CF2B64 /* AddToCartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AC629F2C41500CF2B64 /* AddToCartState.swift */; };
 		80D12AC929F2C42F00CF2B64 /* AddToCartAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AC829F2C42F00CF2B64 /* AddToCartAction.swift */; };
@@ -93,6 +98,13 @@
 			remoteGlobalIDString = 807A29C429F92D40003E3306;
 			remoteInfo = "TCA Store Reducer Protocol";
 		};
+		807A29FF29F93177003E3306 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80555F8E29EACF9000711E8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80555FDB29EC799700711E8D;
+			remoteInfo = TCANetwork;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,6 +115,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				80555FF229EC799700711E8D /* TCANetwork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		807A2A0129F93178003E3306 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				807A29FE29F93177003E3306 /* TCANetwork.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +173,8 @@
 		807A29D329F92D41003E3306 /* TCA_Store_Reducer_Protocol.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TCA_Store_Reducer_Protocol.xcdatamodel; sourceTree = "<group>"; };
 		807A29D929F92D41003E3306 /* TCA Store Reducer ProtocolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TCA Store Reducer ProtocolTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		807A29DD29F92D41003E3306 /* TCA_Store_Reducer_ProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_Store_Reducer_ProtocolTests.swift; sourceTree = "<group>"; };
+		807A29F629F92DC9003E3306 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		807A29F829F92F8C003E3306 /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
 		80D12AC429F2BDB100CF2B64 /* AddToCartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartButton.swift; sourceTree = "<group>"; };
 		80D12AC629F2C41500CF2B64 /* AddToCartState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartState.swift; sourceTree = "<group>"; };
 		80D12AC829F2C42F00CF2B64 /* AddToCartAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToCartAction.swift; sourceTree = "<group>"; };
@@ -201,6 +226,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				807A29FD29F93177003E3306 /* TCANetwork.framework in Frameworks */,
+				807A29FC29F93167003E3306 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +253,7 @@
 				80555FDD29EC799700711E8D /* TCANetwork */,
 				80555FEB29EC799700711E8D /* TCANetworkTests */,
 				80555F9729EACF9000711E8D /* Products */,
+				807A29FA29F93167003E3306 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -383,6 +411,7 @@
 		807A29C629F92D40003E3306 /* TCA Store Reducer Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				807A29F429F92DAC003E3306 /* Scenes */,
 				807A29C729F92D40003E3306 /* TCA_Store_Reducer_ProtocolApp.swift */,
 				807A29C929F92D40003E3306 /* ContentView.swift */,
 				807A29CB29F92D41003E3306 /* Assets.xcassets */,
@@ -407,6 +436,30 @@
 				807A29DD29F92D41003E3306 /* TCA_Store_Reducer_ProtocolTests.swift */,
 			);
 			path = "TCA Store Reducer ProtocolTests";
+			sourceTree = "<group>";
+		};
+		807A29F429F92DAC003E3306 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				807A29F529F92DB7003E3306 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		807A29F529F92DB7003E3306 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				807A29F629F92DC9003E3306 /* HomeView.swift */,
+				807A29F829F92F8C003E3306 /* HomeReducer.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		807A29FA29F93167003E3306 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		80D12AC329F2BD9700CF2B64 /* AddToCartButton */ = {
@@ -539,12 +592,17 @@
 				807A29C129F92D40003E3306 /* Sources */,
 				807A29C229F92D40003E3306 /* Frameworks */,
 				807A29C329F92D40003E3306 /* Resources */,
+				807A2A0129F93178003E3306 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				807A2A0029F93177003E3306 /* PBXTargetDependency */,
 			);
 			name = "TCA Store Reducer Protocol";
+			packageProductDependencies = (
+				807A29FB29F93167003E3306 /* ComposableArchitecture */,
+			);
 			productName = "TCA Store Reducer Protocol";
 			productReference = 807A29C529F92D40003E3306 /* TCA Store Reducer Protocol.app */;
 			productType = "com.apple.product-type.application";
@@ -618,10 +676,10 @@
 			targets = (
 				80555F9529EACF9000711E8D /* TCA Store */,
 				80555FAA29EACF9100711E8D /* TCA StoreTests */,
-				80555FDB29EC799700711E8D /* TCANetwork */,
-				80555FE429EC799700711E8D /* TCANetworkTests */,
 				807A29C429F92D40003E3306 /* TCA Store Reducer Protocol */,
 				807A29D829F92D41003E3306 /* TCA Store Reducer ProtocolTests */,
+				80555FDB29EC799700711E8D /* TCANetwork */,
+				80555FE429EC799700711E8D /* TCANetworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -745,7 +803,9 @@
 				807A29D129F92D41003E3306 /* Persistence.swift in Sources */,
 				807A29D429F92D41003E3306 /* TCA_Store_Reducer_Protocol.xcdatamodeld in Sources */,
 				807A29CA29F92D40003E3306 /* ContentView.swift in Sources */,
+				807A29F729F92DC9003E3306 /* HomeView.swift in Sources */,
 				807A29C829F92D40003E3306 /* TCA_Store_Reducer_ProtocolApp.swift in Sources */,
+				807A29F929F92F8C003E3306 /* HomeReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +844,11 @@
 			isa = PBXTargetDependency;
 			target = 807A29C429F92D40003E3306 /* TCA Store Reducer Protocol */;
 			targetProxy = 807A29DA29F92D41003E3306 /* PBXContainerItemProxy */;
+		};
+		807A2A0029F93177003E3306 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80555FDB29EC799700711E8D /* TCANetwork */;
+			targetProxy = 807A29FF29F93177003E3306 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1308,6 +1373,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		80555FC929EC1FBA00711E8D /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80555FC829EC1FBA00711E8D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		807A29FB29F93167003E3306 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 80555FC829EC1FBA00711E8D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;

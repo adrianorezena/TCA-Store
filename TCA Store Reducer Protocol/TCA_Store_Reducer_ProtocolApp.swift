@@ -5,6 +5,7 @@
 //  Created by Adriano Rezena on 26/04/23.
 //
 
+import ComposableArchitecture
 import SwiftUI
 
 @main
@@ -13,8 +14,12 @@ struct TCA_Store_Reducer_ProtocolApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            HomeView(
+                store: Store(
+                    initialState: HomeReducer.State(),
+                    reducer: HomeReducer()
+                )
+            )
         }
     }
 }
