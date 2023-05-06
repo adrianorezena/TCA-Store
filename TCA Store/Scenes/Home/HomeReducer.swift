@@ -39,10 +39,10 @@ let homeReducer: HomeReducer = HomeReducer.combine(
             state.fetchProductsError = errorMessage
             return .none
             
-        case .binding:
-            return .none
-        
         case .productCellDispatch:
+            return .none
+            
+        case .binding:
             return .none
         }
     }

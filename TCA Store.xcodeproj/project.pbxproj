@@ -49,6 +49,8 @@
 		807A29FE29F93177003E3306 /* TCANetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80555FDC29EC799700711E8D /* TCANetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		807A2A0429F93DFA003E3306 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A2A0329F93DFA003E3306 /* ProductCell.swift */; };
 		807A2A0629F93E24003E3306 /* ProductCellReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A2A0529F93E24003E3306 /* ProductCellReducer.swift */; };
+		807A2A0929F94603003E3306 /* AddToCartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A2A0829F94603003E3306 /* AddToCartButton.swift */; };
+		807A2A0B29F946C7003E3306 /* AddToCartButtonReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A2A0A29F946C7003E3306 /* AddToCartButtonReducer.swift */; };
 		80D12AC529F2BDB100CF2B64 /* AddToCartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AC429F2BDB100CF2B64 /* AddToCartButton.swift */; };
 		80D12AC729F2C41500CF2B64 /* AddToCartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AC629F2C41500CF2B64 /* AddToCartState.swift */; };
 		80D12AC929F2C42F00CF2B64 /* AddToCartAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D12AC829F2C42F00CF2B64 /* AddToCartAction.swift */; };
@@ -179,6 +181,8 @@
 		807A29F829F92F8C003E3306 /* HomeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReducer.swift; sourceTree = "<group>"; };
 		807A2A0329F93DFA003E3306 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		807A2A0529F93E24003E3306 /* ProductCellReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellReducer.swift; sourceTree = "<group>"; };
+		807A2A0829F94603003E3306 /* AddToCartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartButton.swift; sourceTree = "<group>"; };
+		807A2A0A29F946C7003E3306 /* AddToCartButtonReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartButtonReducer.swift; sourceTree = "<group>"; };
 		80D12AC429F2BDB100CF2B64 /* AddToCartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartButton.swift; sourceTree = "<group>"; };
 		80D12AC629F2C41500CF2B64 /* AddToCartState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartState.swift; sourceTree = "<group>"; };
 		80D12AC829F2C42F00CF2B64 /* AddToCartAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToCartAction.swift; sourceTree = "<group>"; };
@@ -453,6 +457,7 @@
 		807A29F529F92DB7003E3306 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				807A2A0729F945E0003E3306 /* AddToCartButton */,
 				807A2A0229F93DE8003E3306 /* ProductCell */,
 				807A29F629F92DC9003E3306 /* HomeView.swift */,
 				807A29F829F92F8C003E3306 /* HomeReducer.swift */,
@@ -474,6 +479,15 @@
 				807A2A0529F93E24003E3306 /* ProductCellReducer.swift */,
 			);
 			path = ProductCell;
+			sourceTree = "<group>";
+		};
+		807A2A0729F945E0003E3306 /* AddToCartButton */ = {
+			isa = PBXGroup;
+			children = (
+				807A2A0829F94603003E3306 /* AddToCartButton.swift */,
+				807A2A0A29F946C7003E3306 /* AddToCartButtonReducer.swift */,
+			);
+			path = AddToCartButton;
 			sourceTree = "<group>";
 		};
 		80D12AC329F2BD9700CF2B64 /* AddToCartButton */ = {
@@ -815,7 +829,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				807A29D129F92D41003E3306 /* Persistence.swift in Sources */,
+				807A2A0929F94603003E3306 /* AddToCartButton.swift in Sources */,
 				807A29D429F92D41003E3306 /* TCA_Store_Reducer_Protocol.xcdatamodeld in Sources */,
+				807A2A0B29F946C7003E3306 /* AddToCartButtonReducer.swift in Sources */,
 				807A29CA29F92D40003E3306 /* ContentView.swift in Sources */,
 				807A29F729F92DC9003E3306 /* HomeView.swift in Sources */,
 				807A29C829F92D40003E3306 /* TCA_Store_Reducer_ProtocolApp.swift in Sources */,

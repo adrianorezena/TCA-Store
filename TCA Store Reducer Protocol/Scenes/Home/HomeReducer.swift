@@ -25,38 +25,43 @@ struct HomeReducer: ReducerProtocol {
     @Dependency(\.productClient) var productClient
     @Dependency(\.uuid) var uuid
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
-        switch action {
-        case .fetchProducts:
-            return .task {
-                await .fetchProductsResponse(
-                    TaskResult {
-                        try await self.productClient.fetchProducts()
-                    }
-                )
-            }
-            
-        case let .fetchProductsResponse(.success(products)):
-            state.productCellStates = IdentifiedArrayOf(
-                uniqueElements: products.map {
-                    ProductCellReducer.State(
-                        id: uuid(),
-                        product: $0
+    var body: some ReducerProtocol<State, Action> {
+        Reduce { state, action in
+            switch action {
+            case .fetchProducts:
+                return .task {
+                    await .fetchProductsResponse(
+                        TaskResult {
+                            try await self.productClient.fetchProducts()
+                        }
                     )
                 }
-            )
+                
+            case let .fetchProductsResponse(.success(products)):
+                state.productCellStates = IdentifiedArrayOf(
+                    uniqueElements: products.map {
+                        ProductCellReducer.State(
+                            id: uuid(),
+                            product: $0
+                        )
+                    }
+                )
+                
+                return .none
+                
+            case let .fetchProductsResponse(.failure(failure)):
+                state.fetchProductsError = failure.localizedDescription
+                return .none
             
-            return .none
-            
-        case let .fetchProductsResponse(.failure(failure)):
-            state.fetchProductsError = failure.localizedDescription
-            return .none
-            
-        case .productCellDispatch:
-            return .none
-            
-        case .binding:
-            return .none
+            case .productCellDispatch:
+                return .none
+                
+            case .binding:
+                return .none
+            }
+        }
+        .forEach(\.productCellStates, action: /Action.productCellDispatch) {
+            ProductCellReducer()
         }
     }
 }

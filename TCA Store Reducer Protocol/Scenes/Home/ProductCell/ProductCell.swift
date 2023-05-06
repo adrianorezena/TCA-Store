@@ -35,7 +35,12 @@ struct ProductCell: View {
                     
                     Spacer()
                     
-//                    AddToCartButton
+                    AddToCartButton(
+                        store:store.scope(
+                            state: \.addToCartState,
+                            action: ProductCellReducer.Action.addToCartDispatch
+                        )
+                    )
                 }
             }
             .padding()
